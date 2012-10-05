@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+  <head>
+   <title>
+    Электронный	учебник. Массивы C++
+	</title>
+   <meta content="text/html; charset=Windows-1251" 
+     http-equiv="content-type" />  
+	<link rel="stylesheet" href="book.css" type="text/css">	
+  </head>
+  <body>
+	<h1 align = "center">Обращение к элементам массива[<a href = "literature.html#lit1">1</a>, <a href = "literature.html#lit2">2</a>, <a href = "literature.html#lit3">3</a>]</h1>
+	
+    <table>
+		<tr align = "center">
+			<td class = "cont">
+				<h3>Содержание</h3>
+				<ul align = "left">
+					<li><a class = "contents" href="intro.html">Введение</a>
+					<li><a class = "contents" href="part1.html">Объявление массива</a>
+					<li>Обращение к элементам массива
+					<li><a class = "contents" href="part3.html">Типовые алгоритмы работы с массивами</a>
+					<li><a class = "contents" href="part4.html">Многомерные массивы</a>
+					<li><a class = "contents" href="part5.html">Динамические массивы</a>
+					<li><a class = "contents" href="questions.html">Вопросы и задания</a>
+					<li><a class = "contents" href="examples.html">Примеры</a>
+				</ul>
+			</td>
+			<td class = "inp">
+				<table>
+					<tr>
+						<td width = "10%"></td>
+						<td>
+							<p>Чаще всего к элементу массива обращаются с помощью индекса (номера) элемента.</p>
+							<p>Синтаксис обращения:</p>
+							<p class = "def">Имя_массива [индекс]</p>
+							<p>Индекс определяет положение элемента в массиве и задается выражением. Выражение должно быть целого типа.</p>
+							<p>Примеры обращения к элементам массива:</p>
+							<p class = "prog">a[1]=2; a[i]=3; </p>
+							<p class = "prog">a[i+2]=a[i];</p>
+							<p><a name = "ans1">Элементы массива в языке С++ нумеруются с 0</a>. Поэтому в массиве, объявленном как массив из 100 элементов, первый элемент имеет индекс равный 0, а последний – 99. Контроль выхода индекса элемента массива за границы допустимых значений при выполнении программы в С++ не выполняется. 
+							В языке С++ отсутствуют операции над массивом. Исключение составляет операция индексации []. Над элементами массива можно выполнять операции, которые допустимы для типа элементов массива.
+							Существует и другой способ обращения к элементам массива.
+							Имя массива также является адресом, по которому в памяти находится первый элемент массива. Соответственно, при необходимости обратиться к какому-либо элементу массива, <a name = "ans3">можно использовать запись вида (p+i)[0]</a>, где i – номер элемента, что равносильно записи p[i].</p>
+
+							<p><a name="example1">Пример(1)</a> программы поиска значения максимального элемента целочисленного массива из n элементов (n<=100):</p>
+							
+							<p><span class = "example">#include &lt;iostream.h&gt;</span></p>
+							<p><span class = "example">#include &lt;conio.h&gt;</span></p>
+							<p><span class = "example">void main ()</span></p>
+							<p><span class = "example">{</span></p>
+							<p><span class = "example">int a[100]; //массив</span></p>
+							<p><span class = "example">int n, i; //количество элементов и индекс элемента</span></p>
+							<p><span class = "example">int max; //значение максимального элемента</span></p>
+							<p><span class = "example">cout&lt;&lt;”n? “;  </span></p>
+							<p><span class = "example">cin&gt;&gt;n</span></p>
+							<p><span class = "example">cout&lt;&lt;”a? “;</span></p>
+							<p><span class = "example">//Ввод массива </span></p>
+							<p><span class = "example">for (i=0; i&lt;n; i++) </span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;cin&gt;&gt;a[I];</span></p>
+							<p><span class = "example">max=a[0];</span></p>
+							<p><span class = "example">for (i=1; i&lt;n; i++) //цикл поиска максимального элемента</span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;if (a[i]&lt;max</span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max=a[I];</span></p>
+							<p><span class = "example">cout&lt;&lt;”max=”&lt;&lt;max;</span></p>
+							<p><span class = "example">getch();</span></p>
+							<p><span class = "example">}</span></p>
+							<p><span class = "example">Тесты:</span></p>
+							<p><span class = "example">n=5</span></p>
+							<p><span class = "example">a: 1, 8, -9, 3, 5       max=8</span></p>
+							<p><span class = "example">a: 1, 8, 2, 8, 6        max=8</span></p>
+							<p><span class = "example">a: 1, 1, 1, 1, 1        max=1</span></p>
+							<a href = "examples.html">К странице примеров</a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table width = "100%" bgcolor = "#ddd">
+		<tr>
+			<td class = "navi">
+			<h4>Перемещение по разделам</h4>
+			</td>
+			<td class = "back">
+			<a class = "navigation" href="part1.html"> Назад</a>
+			</td>
+			<td class = "forw">
+			<a class = "navigation" href="part3.html"> Вперед</a>
+			</td>
+		</tr>
+	</table>
+	<footer>
+	<h6 align = "center">По заказу МГТУ МИРЭА</h6>
+	<a class = "contents" href="index.html">На главную</a>
+	</footer>
+  </body>
+</html>

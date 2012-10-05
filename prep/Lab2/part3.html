@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+  <head>
+   <title>
+    Электронный	учебник. Массивы C++
+	</title>
+   <meta content="text/html; charset=Windows-1251" 
+     http-equiv="content-type" />  
+	 <link rel="stylesheet" href="book.css" type="text/css">	
+  </head>
+  <body>
+	<h1 align = "center">Типовые алгоритмы[<a href = "literature.html#lit7">7</a>]</h1>
+	
+    <table>
+		<tr align = "center">
+			<td class = "cont">
+				<h3>Содержание</h3>
+				<ul align = "left">
+					<li><a class = "contents" href="intro.html">Введение</a>
+					<li><a class = "contents" href="part1.html">Объявление массива</a>
+					<li><a class = "contents" href="part2.html">Обращение к элементам массива</a>
+					<li>Типовые алгоритмы работы с массивами
+					<li><a class = "contents" href="part4.html">Многомерные массивы</a>
+					<li><a class = "contents" href="part5.html">Динамические массивы</a>
+					<li><a class = "contents" href="questions.html">Вопросы и задания</a>
+					<li><a class = "contents" href="examples.html">Примеры</a>
+				</ul>
+			</td>
+			<td class = "inp">
+				<table>
+					<tr>
+						<td width = "10%"></td>
+						<td>
+							<p><a name = "top">Массив</a> используется для хранения последовательности однотипных данных и выполнения над этой последовательностью операций. Типовые операции над массивами:</p>
+							<ul>
+								<li>поиск в массиве;
+								<li>вычисление суммы, количества и произведения определенных элементов массива;
+								<li>сортировка массива;
+								<li>удаление определенных элементов из массива;
+								<li>добавление элементов в массив;
+								<li>формирование массива.
+							</ul>
+							<p><a class = "contents" href = "#bottom">К низу страницы</a></p>
+							
+							<p><a name="example2">Пример(2)</a> программы подсчета отрицательных чисел в массиве из n (n<=100) вещественных чисел:</p>
+
+							<p><span class = "example">#include &lt;iostream.h&gt;</span></p>
+							<p><span class = "example">#include &lt;conio.h&gt;</span></p>
+							<p><span class = "example">void main ()</span></p>
+							<p><span class = "example">{</span></p>
+							<p><span class = "example">float a[100]; //массив</span></p>
+							<p><span class = "example">int n, i; //количество элементов и индекс элемента</span></p>
+							<p><span class = "example">int k; //количество отрицательных чисел</span></p>
+							<p><span class = "example">cout&lt;&lt;”n? “;  </span></p>
+							<p><span class = "example">cin&gt;&gt;n</span></p>
+							<p><span class = "example">cout&lt;&lt;”a? “;</span></p>
+							<p><span class = "example">//Ввод массива </span></p>
+							<p><span class = "example">for (i=0; i&lt;n; i++) </span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;cin&gt;&gt;a[I];</span></p>
+							<p><span class = "example">k=0;</span></p>
+							<p><span class = "example">for (i=0; i<n; i++) //цикл поиска и подсчета отрицательных чисел </span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;if (a[i]<0</span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k++;</span></p>
+							<p><span class = "example">cout&lt;&lt;”k=”&lt;&lt;k;</span></p>
+							<p><span class = "example">getch();</span></p>
+							<p><span class = "example">}</span></p>
+
+							<p><a class = "contents" href = "#top">К началу раздела</a></p>
+							
+							<p><a name="example3">Пример(3)</a> программы сортировки массива из n вещественных чисел (n<=100) по возрастанию методом прямого обмена (пузырьковым методом):</p>
+
+							<p>Схема метода для массива из 5 элементов(первый прогон):</p>
+							<img src = "bulbsort.png"></img>
+
+							</br></br>
+							<p><span class = "example">#include &lt;iostream.h&gt;</span></p>
+							<p><span class = "example">#include &lt;conio.h&gt;</span></p>
+							<p><span class = "example">void main ()</span></p>
+							<p><span class = "example">{</span></p>
+							<p><span class = "example">int a[100]; //массив</span></p>
+							<p><span class = "example">int n, i; //количество элементов и индекс элемента</span></p>
+							<p><span class = "example">int k; //номер прохода массива при сортировке</span></p>
+							<p><span class = "example">cout&lt;&lt;”n? “;  </span></p>
+							<p><span class = "example">cin&gt;&gt;n</span></p>
+							<p><span class = "example">cout&lt;&lt;”a? “;</span></p>
+							<p><span class = "example">//Ввод массива </span></p>
+							<p><span class = "example">for (i=0; i&lt;n; i++) </span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;cin&gt;&gt;a[I];</span></p>
+							<p><span class = "example">//Сортировка пузырьковым методом</span></p>
+							<p><span class = "example">for (k=1; k&lt;n; k++)</span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;for (i=0; i&lt;k-1; i++) </span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (a[i]&gt;a[i+1]) </span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{int t; t=a[i]; a[i]=a[i+1]; a[i+1]=t;} //перестановка элементов</span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;”a:”&lt;&lt;endl;</span></p>
+							<p><span class = "example">for (i=0; i&lt;n; i++) //цикл вывода массива на экран</span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;cout&lt;&lt;a[i]&lt;&lt;’ ‘;</span></p>
+							<p><span class = "example">getch();</span></p>
+							<p><span class = "example">}</span></p>
+
+							<p><a class = "contents" href = "#top">К началу раздела</a></p>
+							
+							<p><a name="example4">Пример(4)</a> программы удаления из массива, содержащего n целых чисел, последнего отрицательного элемента:</p>
+
+							<p><span class = "example">#include &lt;iostream.h&gt;</span></p>
+							<p><span class = "example">#include &lt;conio.h&gt;</span></p>
+							<p><span class = "example">void main ()</span></p>
+							<p><span class = "example">{</span></p>
+							<p><span class = "example">float a[100]; //массив</span></p>
+							<p><span class = "example">int n, i, j; //количество элементов и индексы элемента</span></p>
+							<p><span class = "example">cout&lt;&lt;”n? “;  </span></p>
+							<p><span class = "example">cin&gt;&gt;n</span></p>
+							<p><span class = "example">cout&lt;&lt;”a? “;</span></p>
+							<p><span class = "example">//Ввод массива </span></p>
+							<p><span class = "example">for (i=0; i&lt;n; i++) </span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;cin&gt;&gt;a[I];</span></p>
+							<p><span class = "example">i=n-1; //начальное значение индекса для поиска с конца </span></p>
+							<p><span class = "example">while (i&gt;=0 && a[i]&gt;=0) //цикл поиска отрицательного числа</span></p>
+							<p><span class = "example">i--;</span></p>
+							<p><span class = "example">if (i&gt;=0) //число найдено, номер числа i </span></p>
+							<p><span class = "example">{</span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;for (j=i; j&lt;n-1; j++) //удаление a[i], сжатие массива </span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a[j]=a[j+1];</span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;n--; //количество элементов будет на 1 меньше</span></p>
+							<p><span class = "example">}</span></p>
+							<p><span class = "example">for (i=0; i&lt;n; i++) //вывод массива</span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;cout&lt;&lt;a[I]&lt;&lt;’ ‘;</span></p>
+							<p><span class = "example">getch();</span></p>
+							<p><span class = "example">}</span></p>
+							<p><span class = "example">Тесты: </span></p>
+							<p><span class = "example">n=5, a: 1 –2 –3 5 6              результат: a: 1 –2 5 6, n=4</span></p>
+							<p><span class = "example">n=5, a: -1 –2 –3 –4  -6        результат: a: -1 –2 –3 –4, n=4 </span></p>
+							<p><span class = "example">n=5, a: 1 2 3 4 5                  результат: a: 1 2 3 4 5, n=5</span></p>
+
+							<p><a class = "contents" href = "#top">К началу раздела</a></p>
+							
+							<p><a name="example5">Пример(5)</a> программы формировния нового массива из отрицательных чисел целочисленного массива размера n (n<=100):</p>
+
+							<p><span class = "example">#include &lt;iostream.h&gt;</span></p>
+							<p><span class = "example">#include &lt;conio.h&gt;</span></p>
+							<p><span class = "example">void main ()</span></p>
+							<p><span class = "example">{</span></p>
+							<p><span class = "example">int a[100], b[100]; //исходный и формируемый массивы</span></p>
+							<p><span class = "example">int n, i, j; //количество элементов в массиве и индекcы элементов</span></p>
+							<p><span class = "example">cout&lt;&lt;”n? “;  cin&gt;&gt;n;</span></p>
+							<p><span class = "example">cout&lt;&lt;”a? “;</span></p>
+							<p><span class = "example">for (i=0; i&lt;n; i++) //цикл ввода массива</span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;cin&gt;&gt;a[i];</span></p>
+							<p><span class = "example">j=0; //индекс первого элемента в формируемом массиве</span></p>
+							<p><span class = "example">for (i=0; i&lt;n; i++) //цикл поиска a[i]<0 и запись их в массив </span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;if (a[i]&lt;0) </span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;{ b[j]=a[I]; j++;}</span></p>
+							<p><span class = "example">if (j==0) //новый массив пуст</span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;cout&lt;&lt;”b is empty”;</span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;{</span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;cout&lt;&lt;”b:”;</span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;for (i=0; i&lt;j; i++) </span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;b[i]&lt;&lt;’ ‘;</span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;}</span></p>
+							<p><span class = "example">getch();</span></p>
+							<p><span class = "example">}</span></p>
+							<p><span class = "example">Тесты:</span></p>
+							<p><span class = "example">n=5, a: 1 -2 3 -4 -5          результат b: -2 -3  -5</span></p>
+							<p><span class = "example">n=5, a: -1 -2 -3 -4 -5       результат b: -1 -2 -3 -4 -5</span></p>
+							<p><span class = "example">n=5, a: 1 2 3 4 5              результат : b is empty</span></p>
+
+							<p><a class = "contents" href = "#top">К началу раздела</a></p>
+							
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table width = "100%" bgcolor = "#ddd">
+	<a name = "bottom"></a>
+		<tr>
+			<td class = "navi">
+			<h4>Перемещение по разделам</h4>
+			</td>
+			<td class = "back">
+			<a class = "navigation" href="part2.html"> Назад</a>
+			</td>
+			<td class = "forw">
+			<a class = "navigation" href="part4.html"> Вперед</a>
+			</td>
+		</tr>
+	</table>
+	<footer>
+	<h6 align = "center">По заказу МГТУ МИРЭА</h6>
+	<a class = "contents" href="index.html">На главную</a>
+	</footer>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+  <head>
+   <title>
+    Электронный	учебник. Массивы C++
+	</title>
+   <meta content="text/html; charset=Windows-1251" 
+     http-equiv="content-type" />  
+	 <link rel="stylesheet" href="book.css" type="text/css">	
+  </head>
+  <body>
+	<h1 align = "center">Многомерные массивы[<a href = "literature.html#lit1">1</a>, <a href = "literature.html#lit4">4</a>, <a href = "literature.html#lit5">5</a>, <a href = "literature.html#lit6">6</a>]</h1>
+    <table>
+		<tr align = "center">
+			<td class = "cont">
+				<h3>Содержание</h3>
+				<ul align = "left">
+					<li><a class = "contents" href="intro.html">Введение</a>
+					<li><a class = "contents" href="part1.html">Объявление массива</a>
+					<li><a class = "contents" href="part2.html">Обращение к элементам массива</a>
+					<li><a class = "contents" href="part3.html">Типовые алгоритмы работы с массивами</a>
+					<li>Многомерные массивы
+					<li><a class = "contents" href="part5.html">Динамические массивы</a>
+					<li><a class = "contents" href="questions.html">Вопросы и задания</a>
+					<li><a class = "contents" href="examples.html">Примеры</a>
+				</ul>
+			</td>
+			<td class = "inp">
+				<table>
+					<tr>
+						<td width = "10%"></td>
+						<td>
+							<p>Многомерный массив – это массив, компонентами которого являются массивы.</p>
+							<p>Пример объявления многомерного массива (двумерного массива) из двух элементов, каждый из которых является массивом из трех вещественных чисел:</p>
+							<p class = "prog">float b[2][3];</p>
+							<p>Пример объявления трехмерного массива из четырех элементов, каждый из которых является массивом из 10 двумерных массивов целых чисел:</p>
+							<p class = "prog">int a[4][10][15];</p>
+							<p>При обращении к элементу многомерного массива надо указывать индекс по каждому измерению. Каждый индекс заключается в квадратные скобки. Нумерация индексов по каждому измерению начинается с нуля, например, обращение к элементу, объявленного выше массива:</p>
+							<p class = "prog">a[0][9][4]=25;</p>
+							<p>Многомерные массивы можно инициализировать. Примеры допустимых вариантов инициализации массива:</p>
+							<p class = "prog">float b[2][3]={1.2, 1.3, 1.4, 1.6,1.7, 1.8};  </p>
+							<p class = "prog">float b[2][3]={{1.2, 1.3, 1.4},{1.6, 1.7, 1.8}};  </p>
+							<p class = "prog">float b[][]={{1.2, 1.3, 1.4},{1.6, 1.7, 1.8};  </p>
+							<p>Многомерные массивы располагаются в памяти так, что быстрее всего меняется последний индекс. Так данные двумерного массива, объявленного как </p>
+							<p class = "prog">float b[2][3];</p>
+							<p>располагаются в памяти в следующем порядке:</p>
+							<p class = "prog">b[0][0], b[0][1], b[0][2], b[1][0], b[1][1], b[1][2] </p>
+							<p>На рисунке ниже представлена концептуальная модель двумерного массива с пятью строками и семью столбцами:</p>
+							</img src = "matrix.png">
+
+							<p><a name="example6">Пример(6)</a>  программы вычисления суммы чисел, расположенных выше главной диагонали матрицы целых чисел из n строк и n столбцов (n<=100):</p>
+
+							<p><span class = "example">#include &lt;iostream.h&gt;</span></p>
+							<p><span class = "example">#include &lt;conio.h&gt;</span></p>
+							<p><span class = "example">void main ()</span></p>
+							<p><span class = "example">{</span></p>
+							<p><span class = "example">int a[100]; //массив</span></p>
+							<p><span class = "example">int s; //сумма элементов матрицы
+							<p><span class = "example">int i, j; //номера строк и столбцов
+							<p><span class = "example">int n; //размер матрицы
+							<p><span class = "example">cout&lt;&lt;”n? “;  </span></p>
+							<p><span class = "example">cin&gt;&gt;n</span></p>
+							<p><span class = "example">cout&lt;&lt;”a? “;</span></p>
+							<p><span class = "example">//Ввод массива </span></p>
+							<p><span class = "example">for (i=0; i&lt;n; i++) </span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;for (i=0; i&lt;n; i++) </span></p>
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cin&gt;&gt;a[i];</span></p>
+							<p><span class = "example">//Вычисление суммы элементов выше главной диагонали
+							<p><span class = "example">s=0;
+							<p><span class = "example">for(i=0; i&lt;n-1; i++)
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;for(j=i+1; j&lt;n; j++)
+							<p><span class = "example">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s+=a[i][j];
+							<p><span class = "example">cout&lt;&lt;”s=”&lt;&lt;s;
+							<p><span class = "example">getch();
+							<p><span class = "example">}
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table width = "100%" bgcolor = "#ddd">
+		<tr>
+			<td class = "navi">
+			<h4>Перемещение по разделам</h4>
+			</td>
+			<td class = "back">
+			<a class = "navigation" href="part3.html"> Назад</a>
+			</td>
+			<td class = "forw">
+			<a class = "navigation" href="part5.html"> Вперед</a>
+			</td>
+		</tr>
+	</table>
+	<footer>
+	<h6 align = "center">По заказу МГТУ МИРЭА</h6>
+	<a class = "contents" href="index.html">На главную</a>
+	</footer>
+  </body>
+</html>
