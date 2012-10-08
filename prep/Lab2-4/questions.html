@@ -9,7 +9,9 @@
 	 <link rel="stylesheet" href="book.css" type="text/css">	
   </head>
   <body>
-	<h1 align = "center">Примеры</h1>
+	<header class = "title" height="100px">
+	<p align = "center">Вопросы и задания</p>
+	</header>
     <table>
 		<tr align = "center">
 			<td class = "cont">
@@ -21,7 +23,7 @@
 					<li><a class = "contents" href="part3.html">Типовые алгоритмы работы с массивами</a>
 					<li><a class = "contents" href="part4.html">Многомерные массивы</a>
 					<li><a class = "contents" href="part5.html">Динамические массивы</a>
-					<li><a class = "contents" href="questions.html">Вопросы и задания</a>
+					<li>Вопросы и задания
 					<li><a class = "contents" href="examples.html">Примеры</a>
 				</ul>
 			</td>
@@ -30,14 +32,25 @@
 					<tr>
 						<td width = "10%"></td>
 						<td>
-							<h2 align = "left">Список примеров. Краткие описания</h2>
+							<h2 align = "left">Массивы. Цели лекции</h2>
 							<ol align = "left">
-								<li><a class = "examples" href = "part2.html#example1">Программа поиска значения максимального элемента целочисленного массива из n элементов (n<=100)</a>
-								<li><a class = "examples" href = "part3.html#example2">Программа подсчета отрицательных чисел в массиве из n (n<=100) вещественных чисел</a>
-								<li><a class = "examples" href = "part3.html#example3">Программа сортировки массива из n вещественных чисел (n<=100) по возрастанию методом прямого обмена (пузырьковым методом)</a>
-								<li><a class = "examples" href = "part3.html#example4">Программа удаления из массива, содержащего n целых чисел, последнего отрицательного элемента</a>
-								<li><a class = "examples" href = "part3.html#example5">Программа формировния нового массива из отрицательных чисел целочисленного массива размера n (n<=100)</a>
-								<li><a class = "examples" href = "part4.html#example6">Программа вычисления суммы чисел, расположенных выше главной диагонали матрицы целых чисел из n строк и n столбцов (n<=100)</a>
+								<li>С какого числа начинается нумерация элементов массива?<a href = "part2.html#ans1">Отв1</a>
+								<li>Сколько элементов будет содержать массив?<a href = "part1.html#ans2">Отв2</a>
+									<ul>
+										<li>int a []= {3,6,2,8,-2} </li>
+										<li>char city[] = “Москва”</li>
+										<li>char city1[] = {“М”, “о”, “с”, “к”, “в”, “а”}</li>
+									</ul>
+								</li>
+								<li>Создан массив указателей на целые числа. Какой элемент будет хранить адрес числа 7?<a href = "part2.html#ans3">Отв3</a>
+									<ul>
+										<li>int * mas [4];</li>
+										<li>*(mas +1) = 7;</li>
+									</ul>
+								</li>
+								<li>Напишите <a class = "examples" href = "examples.html">программу</a>, вычисляющую суммы положительных и отрицательных элементов массива.</li>
+								<li>Напишите <a class = "examples" href = "examples.html">программу</a>, вычисляющую произведение всех чисел двумерного массива 5*8 элементов, которые делятся на 3 и 7 без остатка.</li>
+								<li>Напишите <a class = "examples" href = "examples.html">программу</a> циклического сдвига одномерного массива на n позиций влево.</li>
 							</ol>
 						</td>
 					</tr>

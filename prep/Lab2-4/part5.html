@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+  <head>
+   <title>
+    Электронный	учебник. Массивы C++
+	</title>
+   <meta content="text/html; charset=Windows-1251" 
+     http-equiv="content-type" />  
+	 <link rel="stylesheet" href="book.css" type="text/css">	
+  </head>
+  <body>
+	<header class = "title" height="100px">
+	<p align = "center">Динамические массивы[<a href = "literature.html#lit2">2</a>, <a href = "literature.html#lit5">5</a>, <a href = "literature.html#lit7">7</a>]</p>
+	</header>
+    <table>
+		<tr align = "center">
+			<td class = "cont">
+				<h3>Содержание</h3>
+				<ul align = "left">
+					<li><a class = "contents" href="intro.html">Введение</a>
+					<li><a class = "contents" href="part1.html">Объявление массива</a>
+					<li><a class = "contents" href="part2.html">Обращение к элементам массива</a>
+					<li><a class = "contents" href="part3.html">Типовые алгоритмы работы с массивами</a>
+					<li><a class = "contents" href="part4.html">Многомерные массивы</a>
+					<li>Динамические массивы
+					<li><a class = "contents" href="questions.html">Вопросы и задания</a>
+					<li><a class = "contents" href="examples.html">Примеры</a>
+				</ul>
+			</td>
+			<td class = "inp">
+				<table>
+					<tr>
+						<td width = "10%"></td>
+						<td>
+							<p>Рассмотренные ранее массивы называются статическими. Но что же делать, если мы не знаем заранее размеров массива? В этом случае, мы можем изначально задать массив в виде указателя на нулевой элемент ( int *arr ), не выделяя памяти, а затем, узнав число элементов, инициализировать его:</p>
+							<p class = "prog">arr1 =  new int[n];</p>
+							<p>Двумерные динамические массивы задаются сложнее:</p>
+							<p class = "prog">int **arr2 = new int*[dim1];</p>
+							<p class = "prog">for(int i = 0; i &lt;dim1; i++) arr2 = new int[dim2];</p>
+
+							<p>После создания динамического массива и работы с ним необходимо очищать память:</p>
+							<p class = "prog">delete[] arr1; //в случае одномерного массива</p>
+
+							<p class = "prog">for(int i = 0; i &lt; dim1; i++) delete[]arr2[i]; // последовательное уничтожение строк</p>
+							<p class = "prog">delete[] arr2; //в случае двумерного массива</p>
+
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table width = "100%" bgcolor = "#ddd">
+		<tr>
+			<td class = "navi">
+			<h4>Перемещение по разделам</h4>
+			</td>
+			<td class = "back">
+			<a class = "navigation" href="part4.html"> Назад</a>
+			</td>
+			<td class = "forw">
+			<a class = "navigation" href="questions.html"> Вперед</a>
+			</td>
+		</tr>
+	</table>
+	<footer>
+	<h6 align = "center">По заказу МГТУ МИРЭА</h6>
+	<a class = "contents" href="index.html">На главную</a>
+	</footer>
+  </body>
+</html>
