@@ -52,6 +52,16 @@ table
 	height:100%;
 	border-top: 3px solid black;
 }
+.inp1
+{
+	background-color:#aaaaaa;
+	margin:0;
+	text-align:justify;
+	height:100%;
+	width:800px;
+	border: 1px solid green;
+}
+
 .liter
 {
 	background-color:#aaaaaa;
@@ -114,4 +124,10 @@ p
 	font-family:"Times New Roman";
 	text-indent: 25px;
 	line-height: 1em;
+}
+
+form.test
+{
+	width: 100%;
+	border: 1px solid red;
 }
