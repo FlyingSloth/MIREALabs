@@ -44,6 +44,7 @@ table
 	height:100%;
 	vertical-align:top;
 	border-right: 3px solid black;
+	text-align:left;
 }
 .inp
 {
@@ -51,6 +52,7 @@ table
 	width:85%;
 	height:100%;
 	border-top: 3px solid black;
+	text-align:left;
 }
 .inp1
 {
@@ -59,9 +61,7 @@ table
 	text-align:justify;
 	height:100%;
 	width:800px;
-	border: 1px solid green;
 }
-
 .liter
 {
 	background-color:#aaaaaa;
@@ -129,5 +129,5 @@ p
 form.test
 {
 	width: 100%;
-	border: 1px solid red;
+	text-align:justify;
 }

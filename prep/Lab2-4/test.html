@@ -1,12 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
   <head>
-   <title>
-    Электронный	учебник. Массивы C++
+	<title>
+		Электронный	учебник. Массивы C++
 	</title>
-   <meta content="text/html; charset=Windows-1251" 
-     http-equiv="content-type" />  
-	 <link rel="stylesheet" href="book.css" type="text/css">	
+	<meta content="text/html; charset=Windows-1251" 
+		http-equiv="content-type" />  
+	<link rel="stylesheet" href="book.css" type="text/css">	
+	<script type="text/javascript" src = "testing.js"></script>
   </head>
   <body>
 	<header class = "title" height="100px">
@@ -34,43 +35,48 @@
 					<tr>
 						<td class = "inp1">
 							<h2 align = "left">Вопросы для самоконтроля</h2>
-							<form class = "test">
+							<form class = "test" id = "test">
 							<ol>
 								<li>Какая из сортировок быстрее:</br>
-									<input type = "radio" name = "q1" value = "a11">Selectsort</input></br>
-									<input type = "radio" name = "q1" value = "a12">Bubblesort</input></br>
-									<input type = "radio" name = "q1" value = "a13">Heapsort</input></br>
+									<input type = "radio" name = "q1" value = "a11" onclick = answerOne("a11")>Selectsort</br>
+									<input type = "radio" name = "q1" value = "a12" onclick = answerOne("a12")>Bubblesort</br>
+									<input type = "radio" name = "q1" value = "a13" onclick = answerOne("a13")>Heapsort</br>
 								</li>
-								<li>В каком наборе строк(3) программы ошибка:
-									<p><span class = "example">#include &lt;iostream.h&gt;//1</span></p>
-									<p><span class = "example">#include &lt;conio.h&gt; //2</span></p>
-									<p><span class = "example">void main ()//3</span></p>
-									<p><span class = "example">{//4</span></p>
-									<p><span class = "example">int[] a = new int[100];//5</span></p>
-									<p><span class = "example">int n, i;//6</span></p>
-									<p><span class = "example">int max;//7</span></p>
-									<p><span class = "example">cout&gt;&gt;”n? “;//8  </span></p>
-									<p><span class = "example">cin&gt;&gt;”n;//9</span></p>
-									<p><span class = "example">cout&lt;&lt;”a? “;//10</span></p>
-									<p><span class = "example">for (i=0; i&lt;=n; i++) //11</span></p>
-									<p><span class = "example">&nbsp;&nbsp;&nbsp;cin&gt;&gt;a[i];//12</span></p>
-									<p><span class = "example">max=a[0];//13</span></p>
-									<p><span class = "example">for (i=1; i&lt;=n; i++)//14</span></p>
-									<p><span class = "example">&nbsp;&nbsp;&nbsp;if (a[i]&lt;max//15</span></p>
-									<p><span class = "example">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max=a[i];//16</span></p>
-									<p><span class = "example">cout&lt;&lt;”max=”&lt;&lt;max;//17</span></p>
-									<p><span class = "example">}//18</span></p>
+								<li>В каком наборе строк программы ошибка:
+									<p><span class = "example">1&nbsp;&nbsp;&nbsp;&nbsp;#include &lt;iostream.h&gt;</span></p>
+									<p><span class = "example">2&nbsp;&nbsp;&nbsp;&nbsp;#include &lt;conio.h&gt;</span></p>
+									<p><span class = "example">3&nbsp;&nbsp;&nbsp;&nbsp;void main ()</span></p>
+									<p><span class = "example">4&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+									<p><span class = "example">5&nbsp;&nbsp;&nbsp;&nbsp;int[] a = new int[100];</span></p>
+									<p><span class = "example">6&nbsp;&nbsp;&nbsp;&nbsp;int n, i;</span></p>
+									<p><span class = "example">7&nbsp;&nbsp;&nbsp;&nbsp;int max;</span></p>
+									<p><span class = "example">8&nbsp;&nbsp;&nbsp;&nbsp;cout&gt;&gt;”n? “;  </span></p>
+									<p><span class = "example">9&nbsp;&nbsp;&nbsp;&nbsp;cin&gt;&gt;”n;</span></p>
+									<p><span class = "example">10 &nbsp;&nbsp;cout&lt;&lt;”a? “;</span></p>
+									<p><span class = "example">11 &nbsp;&nbsp;for (i=0; i&lt;=n; i++) </span></p>
+									<p><span class = "example">12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cin&gt;&gt;a[i];</span></p>
+									<p><span class = "example">13 &nbsp;&nbsp;max=a[0];</span></p>
+									<p><span class = "example">14 &nbsp;&nbsp;for (i=1; i&lt;=n; i++)</span></p>
+									<p><span class = "example">15 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (a[i]&lt;max)</span></p>
+									<p><span class = "example">16 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max=a[i];</span></p>
+									<p><span class = "example">17 &nbsp;&nbsp;cout&lt;&lt;”max=”&lt;&lt;max;</span></p>
+									<p><span class = "example">18 &nbsp;&nbsp;delete[] a;</span></p>
+									<p><span class = "example">19 &nbsp;&nbsp;}</span></p>
 									</br>
-									<input type = "checkbox" name = "q2" value = "a20">5</input></br>
-									<input type = "checkbox" name = "q2" value = "a21">8</input></br>
-									<input type = "checkbox" name = "q2" value = "a22">9</input></br>
-									<input type = "checkbox" name = "q2" value = "a23">10</input></br>
-									<input type = "checkbox" name = "q2" value = "a24">11</input></br>
-									<input type = "checkbox" name = "q2" value = "a25">12</input></br>
-									<input type = "checkbox" name = "q2" value = "a26">13</input></br>
-									<input type = "checkbox" name = "q2" value = "a24">14</input></br>
+									<input type = "radio" name = "q2" value = "a21" onclick = answerTwo("a21")>5,8,13</input></br>
+									<input type = "radio" name = "q2" value = "a22" onclick = answerTwo("a22")>8,9,14</input></br>
+									<input type = "radio" name = "q2" value = "a23" onclick = answerTwo("a23")>9,11,13</input></br>
+									<input type = "radio" name = "q2" value = "a24" onclick = answerTwo("a24")>8,11,14</input></br>
+									<input type = "radio" name = "q2" value = "a25" onclick = answerTwo("a25")>10,12,14</input></br>
 								</li>
-								<li>
+								<li>Чему будет равно значение переменной x после выполнения фрагмента кода?
+									<p><span class = "example">int arr[] = {1, 2};</span></p>
+									<p><span class = "example">int x = *(arr+arr[1] - arr[0]);</span></p>
+									<input type = "radio" name = "q2" value = "a31" onclick = answerThree("a31")>0</input></br>
+									<input type = "radio" name = "q2" value = "a32" onclick = answerThree("a32")>1</input></br>
+									<input type = "radio" name = "q2" value = "a33" onclick = answerThree("a33")>2</input></br>
+									<input type = "radio" name = "q2" value = "a34" onclick = answerThree("a34")>Ошибка компиляции</input></br>
+								</li>
 							</ol>
 							</form>
 						</td>
