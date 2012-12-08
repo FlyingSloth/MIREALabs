@@ -1,0 +1,22 @@
+﻿body {
+  font-family: Arial, serif;
+  color: #417D7B;
+  background: #F2FFD2;
+}
+h1 {
+  font-size: 18;
+  color: #183E4C;
+  font-weight: bold;
+}
+a, a:visited, a:active {color: #417D7B;}
+pre {
+  color: #001936;
+  background: #8FC4A6;
+  
+}
+
+.menu {
+  color: #001936;
+  font-weight: bold; 
+  text-align: center;
+}

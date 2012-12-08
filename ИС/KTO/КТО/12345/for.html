@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+  <head>
+   <title>Электронный учебник. Операторы цикла языка С++</title>
+  </head>
+  <meta content="text/html; charset=Windows-1251" 
+       http-equiv="content-type" />
+	   <link rel="stylesheet" href="style.css" />
+  <body>
+    <h1>Операторы цикла. Оператор for.</h1>
+	<TABLE valign="top" width=100% height=100%>
+	<TR  align="right"><td colspan=2><b>Автор: Скворцов А.Н.</b></td></tr>
+	<TD valign=top width=20%><div class='menu'><h1>Содержание</h1>
+	<a href="index.html">Вступление</a><br>
+	<a href="for.html">Оператор for</a><br>
+	<a href="while.html">Оператор while</a><br>
+	<a href="do.html">Оператор do</a><br>
+	<a href="exers.html">Упражнения</a><br>
+	<a href="test.html">Тестирование</a><br>
+	<a href="bibl.html">Библиографический список</a><br></TD></div>
+	<TD>
+	
+<b><font size="3">Синтаксис оператора:</font></b><br>
+<blockquote><i>for ([выражение1]; [выражение2]; [выражение3]) оператор</i></blockquote>
+
+<b><font size="3">Пример оператора:</font></b><br>
+<blockquote><i>for (i=0; i&lt;10; i++)<br>
+   cout&lt;&lt;i&lt;&lt;’ ‘;</i><br></blockquote>
+   
+<b><font size="3">Выполнение оператора:</font></b>
+<ol><li>Вычисляется выражение1, если оно есть.</li>
+<li>Вычисляется выражение2, если оно есть.</li>
+<li>Если выражение2 истинно (&lt;&gt;0) или оно отсутствует</li>
+<li>выполняется оператор тела цикла, иначе выход из цикла.</li>
+<li>Вычисляется выражение3, если оно есть.</li>
+<li>Переход на пункт 2.</li></ol>
+
+Оператор for является оператором цикла с предусловием: перед каждой итерацией цикла, в том числе и перед первым выполнением, проверяется условие выполнения цикла.<br><br>
+
+<b><font size="3">Пример программы вычисления суммы:</font></b>
+ <pre>
+<i>#include &lt;conio.h&gt;
+#include &lt;iostream.h&gt;
+void main()
+{
+float s; //сумма 
+int n; //количество слагаемых
+int i; //номер слагаемого
+cout&lt;&lt; &quot;n? &quot;; cin&gt;&gt;n; 
+s=0;
+for (i=1; i&lt;=n; i++)
+   s=s+1.0/i;
+   cout&lt;&lt;&quot;s=&quot;&lt;&lt;s;
+getch();
+}     </i>
+</pre>
+ 	</TD>
+	</TR>
+	<tr>
+	<tr><td colspan=2><hr><a href="for-e.html">Дополнительные примеры</a><br></td></tr>
+	<td align="center" colspan=2>
+	<a href="index.html">Предыдущий раздел</a> --- <a href="while.html">Следующий раздел</a>
+	</td><tr>
+	</TABLE>
+  </body>
+</html>

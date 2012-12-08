@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+  <head>
+   <title>Электронный учебник. Операторы цикла языка С++</title>
+  </head>
+  <meta content="text/html; charset=Windows-1251" 
+       http-equiv="content-type" />
+	   <link rel="stylesheet" href="style.css" />
+  <body>
+    <h1>Операторы цикла. Оператор while.</h1>
+	<TABLE valign="top" width=100% height=100%>
+	<TR  align="right"><td colspan=2><b>Автор: Скворцов А.Н.</b></td></tr>
+	<TD valign=top width=20%><div class='menu'><h1>Содержание</h1>
+	<a href="index.html">Вступление</a><br>
+	<a href="for.html">Оператор for</a><br>
+	<a href="while.html">Оператор while</a><br>
+	<a href="do.html">Оператор do</a><br>
+	<a href="exers.html">Упражнения</a><br>
+	<a href="test.html">Тестирование</a><br>
+	<a href="bibl.html">Библиографический список</a><br></TD></div>
+	<TD>
+	<b><font size="3">Синтаксис оператора:</font></b><br>
+	<blockquote><i>while (выражение) оператор</i></blockquote>
+
+<b><font size="3">Выполнение оператора:</font></b>
+пока выражение истинно выполняется оператор.<br>
+ 
+Оператор while является оператором цикла с предусловием.<br><br>
+
+<b><font size="3">Пример программы вычисления количества цифр в целом числе:</font></b><br><br>
+<pre>
+#include &lt;iostream.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;math.h&gt;
+void main()
+{
+int x; //число
+int y; //модуль числа
+int k=1; //количество цифр в числе
+cout&lt;&lt;"x? "; cin&gt;&gt;x;
+y=abs(x);
+while (y>=10)
+{
+   k++;
+   y/=10;  //целочисленное деление
+}
+cout&lt;&lt;&quote;k=&quote;&lt;&lt;k;
+getch();
+}
+
+Тесты:
+х=123      результат=3
+х=0        результат=1
+х=-34567   результат=5
+</pre>
+ 	</TD>
+	</TR>
+	<tr>
+	<tr><td colspan=2><hr><a href="while-e.html">Дополнительные примеры</a><br></td></tr>
+	<td align="center" colspan=2>
+	<a href="for.html">Предыдущий раздел</a> --- <a href="do.html">Следующий раздел</a>
+	</td><tr>
+	</TABLE>
+  </body>
+</html>

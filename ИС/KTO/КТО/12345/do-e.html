@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+  <head>
+   <title>Электронный учебник. Операторы цикла языка С++</title>
+  </head>
+  <meta content="text/html; charset=Windows-1251" 
+       http-equiv="content-type" />
+	   <link rel="stylesheet" href="style.css" />
+  <body>
+    <h1>Дополнительные примеры. Оператор do.</h1>
+	<TABLE valign="top" width=100% height=100%>
+	<TR  align="right"><td colspan=2><b>Автор: Скворцов А.Н.</b></td></tr>
+	<TD valign=top width=20%><div class='menu'><h1>Содержание</h1>
+	<a href=#>Вступление</a><br>
+	<a href="for.html">Оператор for</a><br>
+	<a href="while.html">Оператор while</a><br>
+	<a href="do.html">Оператор do</a><br>
+	<a href="exers.html">Упражнения</a><br>
+	<a href="test.html">Тестирование</a><br>
+	<a href="bibl.html">Библиографический список</a><br></TD></div>
+	<TD>
+<pre>
+#include &lt;stdio.h&gt;  
+#include &lt;math.h&gt;  
+  
+/* Решение уравнения x-cos(sin(x))=0 */  
+void main (void)  
+{  
+   double x_new=0.9, x_old, eps=0.0001;  
+   do  
+   {  
+      x_old = x_new;  
+      x_new = cos(sin(x_old));  
+   }  while ( fabs( x_new - x_old ) > eps );  
+   printf ( &quot;x=%lf&quot;, x_new );  
+}  
+</pre>
+ 	</TD>
+	</TR>
+	<tr>
+	<tr><td colspan=2 align="center"><hr><a href="do.html">Назад к разделу</a><br></td></tr>
+	<tr>
+	</TABLE>
+  </body>
+</html>
