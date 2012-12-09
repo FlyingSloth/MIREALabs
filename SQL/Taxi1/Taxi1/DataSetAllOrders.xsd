@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetAllOrders" targetNamespace="http://tempuri.org/DataSetAllOrders.xsd" xmlns:mstns="http://tempuri.org/DataSetAllOrders.xsd" xmlns="http://tempuri.org/DataSetAllOrders.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" ParameterPrefix=":" PropertyReference="ApplicationSettings.Taxi1.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="Oracle.DataAccess.Client" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VIEW_ALL_ORDERSTableAdapter" GeneratorDataComponentClassName="VIEW_ALL_ORDERSTableAdapter" Name="VIEW_ALL_ORDERS" UserDataComponentName="VIEW_ALL_ORDERSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="SLOTH.VIEW_ALL_ORDERS" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ORDERID, STATE, "TYPE", COLOR, ADDRESS, ARRIVALTIME FROM SLOTH.VIEW_ALL_ORDERS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ORDERID" DataSetColumn="ORDERID" />
+              <Mapping SourceColumn="STATE" DataSetColumn="STATE" />
+              <Mapping SourceColumn="TYPE" DataSetColumn="TYPE" />
+              <Mapping SourceColumn="COLOR" DataSetColumn="COLOR" />
+              <Mapping SourceColumn="ADDRESS" DataSetColumn="ADDRESS" />
+              <Mapping SourceColumn="ARRIVALTIME" DataSetColumn="ARRIVALTIME" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetAllOrders" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSetAllOrders" msprop:Generator_UserDSName="DataSetAllOrders">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VIEW_ALL_ORDERS" msprop:Generator_TableClassName="VIEW_ALL_ORDERSDataTable" msprop:Generator_TableVarName="tableVIEW_ALL_ORDERS" msprop:Generator_TablePropName="VIEW_ALL_ORDERS" msprop:Generator_RowDeletingName="VIEW_ALL_ORDERSRowDeleting" msprop:Generator_UserTableName="VIEW_ALL_ORDERS" msprop:Generator_RowChangingName="VIEW_ALL_ORDERSRowChanging" msprop:Generator_RowEvHandlerName="VIEW_ALL_ORDERSRowChangeEventHandler" msprop:Generator_RowDeletedName="VIEW_ALL_ORDERSRowDeleted" msprop:Generator_RowEvArgName="VIEW_ALL_ORDERSRowChangeEvent" msprop:Generator_RowChangedName="VIEW_ALL_ORDERSRowChanged" msprop:Generator_RowClassName="VIEW_ALL_ORDERSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ORDERID" msprop:Generator_ColumnVarNameInTable="columnORDERID" msprop:Generator_ColumnPropNameInRow="ORDERID" msprop:Generator_ColumnPropNameInTable="ORDERIDColumn" msprop:Generator_UserColumnName="ORDERID" type="xs:decimal" />
+              <xs:element name="STATE" msprop:Generator_ColumnVarNameInTable="columnSTATE" msprop:Generator_ColumnPropNameInRow="STATE" msprop:Generator_ColumnPropNameInTable="STATEColumn" msprop:Generator_UserColumnName="STATE" type="xs:decimal" />
+              <xs:element name="TYPE" msprop:Generator_ColumnVarNameInTable="columnTYPE" msprop:Generator_ColumnPropNameInRow="TYPE" msprop:Generator_ColumnPropNameInTable="TYPEColumn" msprop:Generator_UserColumnName="TYPE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COLOR" msprop:Generator_ColumnVarNameInTable="columnCOLOR" msprop:Generator_ColumnPropNameInRow="COLOR" msprop:Generator_ColumnPropNameInTable="COLORColumn" msprop:Generator_UserColumnName="COLOR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ADDRESS" msprop:Generator_ColumnVarNameInTable="columnADDRESS" msprop:Generator_ColumnPropNameInRow="ADDRESS" msprop:Generator_ColumnPropNameInTable="ADDRESSColumn" msprop:Generator_UserColumnName="ADDRESS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ARRIVALTIME" msprop:Generator_ColumnVarNameInTable="columnARRIVALTIME" msprop:Generator_ColumnPropNameInRow="ARRIVALTIME" msprop:Generator_ColumnPropNameInTable="ARRIVALTIMEColumn" msprop:Generator_UserColumnName="ARRIVALTIME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

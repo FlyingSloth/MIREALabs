@@ -13,15 +13,24 @@ namespace Taxi1
 {
 	public partial class frmLogin : Form
 	{
+		frmMain _m;
 		public frmLogin()
 		{
 			InitializeComponent();
 		}
 
+		
+		public frmLogin(frmMain _m)
+		{
+			InitializeComponent();
+			this._m = _m;
+			this._m.Visible = false;
+		}
+		public bool isLogged = false;
+
 		string user;
 		string pass;
-		string prevpass;
-		int pl = 0;
+		string opID;
 
 		string connstring = "User " +
 "Id=sloth;Password=12345;Data Source=orcl;";
@@ -82,9 +91,21 @@ namespace Taxi1
 			{
 				string dbpass = pPas.Value.ToString().TrimEnd(' ');
 				if (dbpass == pass)
-					MessageBox.Show("Лог-ин удался");
+				{
+					string sqlID = "SELECT opid from users where (username = '" + user + "') and (pass = '" + pPas.Value.ToString() + "')";
+					OracleCommand cmdID = new OracleCommand(sqlID, conn);
+					cmdID.CommandType = CommandType.Text;
+					OracleDataReader drID = cmdID.ExecuteReader();
+					drID.Read();
+					opID = drID.GetValue(0).ToString();
+
+					MessageBox.Show("Вход в систему выполнен!");
+					isLogged = true;
+					_m.opID =  Convert.ToInt32(opID);
+					this.Close();
+				}
 				else
-					MessageBox.Show("Неверный пароль");
+					MessageBox.Show("Неверный логин или пароль!");
 			}
 		}
 	}
