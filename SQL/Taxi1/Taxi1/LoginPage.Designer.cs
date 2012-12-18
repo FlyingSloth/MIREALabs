@@ -102,6 +102,7 @@
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.cbUsers);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.Location = new System.Drawing.Point(250, 0);
 			this.Name = "frmLogin";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

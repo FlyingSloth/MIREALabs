@@ -17,13 +17,14 @@ namespace Taxi1
 		}
 
 		frmLogin log;
-		bool isNO, isAO, isAP;
+		private int _opID;
+		int actIndex;
 
-		public int opID;
-		/*{
-			set {this.opID=value;}
-			get {return this.opID;}
-		}*/
+		public int opID
+		{
+			set {this._opID=value;}
+			get {return this._opID;}
+		}
 
 		public void setOPID(int value)
 		{
@@ -32,8 +33,6 @@ namespace Taxi1
 
 		private void frmMain_Load(object sender, EventArgs e)
 		{
-			// TODO: This line of code loads data into the 'dataSetAllOrders.VIEW_ALL_ORDERS' table. You can move, or remove it, as needed.
-			this.vIEW_ALL_ORDERSTableAdapter.Fill(this.dataSetAllOrders.VIEW_ALL_ORDERS);
 			log = new frmLogin(this);
 			log.FormClosed += new FormClosedEventHandler(log_FormClosed);
 			this.Visible = false;
@@ -45,6 +44,7 @@ namespace Taxi1
 			if (log.isLogged)
 			{
 				this.Visible = true;
+				lblOP.Text = _opID.ToString();
 			}
 			else this.Close();
 		}
@@ -54,31 +54,16 @@ namespace Taxi1
 			this.Close();
 		}
 
-		private void TotalSetup()
+		private void cbAction_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			if (isNO) NewOrder();
-			if (isAO) AllOrders();
-			if (isAP) AllPayments();
+			if (cbAction.SelectedIndex != -1) actIndex = cbAction.SelectedIndex;
 		}
 
-		private void NewOrder()
-		{ 
-			
-		}
-
-		private void AllOrders()
-		{ 
-			
-		}
-
-		private void AllPayments()
-		{ 
-			
-		}
-
-		private void frmMain_Shown(object sender, EventArgs e)
+		private void btnOk_Click(object sender, EventArgs e)
 		{
-			
+				if (actIndex == 0) new frmNewOrder().ShowDialog();
+				if (actIndex == 1) new frmAllOrders().ShowDialog();
+				if (actIndex == 2) new frmPayments().ShowDialog();
 		}
 	}
 }

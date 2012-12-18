@@ -98,10 +98,8 @@ namespace Taxi1
 					OracleDataReader drID = cmdID.ExecuteReader();
 					drID.Read();
 					opID = drID.GetValue(0).ToString();
-
-					MessageBox.Show("Вход в систему выполнен!");
 					isLogged = true;
-					_m.opID =  Convert.ToInt32(opID);
+					_m.opID =  Convert.ToInt32(this.opID);
 					this.Close();
 				}
 				else
